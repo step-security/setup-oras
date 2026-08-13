@@ -37,7 +37,7 @@ for (const inputFile of Object.keys(meta.inputs)) {
   }
 }
 
-const LICENSE_FILES = ['LICENSE', 'LICENSE.md', 'LICENSE.txt', 'LICENCE', 'license', 'license.md'];
+const LICENSE_FILES = ['LICENSE', 'LICENSE.md', 'LICENSE.txt', 'LICENCE', 'License', 'license', 'license.md'];
 
 const entries = [];
 for (const [pkgName, pkgDir] of Object.entries(pkgPaths).sort()) {
