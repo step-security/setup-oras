@@ -1,0 +1,29 @@
+{
+  "name": "setup-oras",
+  "version": "2.0.1",
+  "description": "Set up your GitHub Actions workflow with a specific version of ORAS",
+  "scripts": {
+    "build": "esbuild src/setup.ts --bundle --platform=node --format=cjs --target=node24 --metafile=dist/meta.json --outfile=dist/index.js && node scripts/generate-licenses.js dist/meta.json dist/licenses.txt && rm dist/meta.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/step-security/setup-oras.git"
+  },
+  "keywords": [],
+  "author": "step-security",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/step-security/setup-oras/issues"
+  },
+  "homepage": "https://github.com/step-security/setup-oras#readme",
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "@actions/tool-cache": "^4.0.0",
+    "axios": "^1.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "esbuild": "^0.28.1",
+    "typescript": "^7.0.2"
+  }
+}
