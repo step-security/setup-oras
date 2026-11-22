@@ -59,25 +59,6 @@ steps:
 
 The action sends the token only to `github.com`. It does not send the token to a custom `url` on a different host. To download without a token, set `token` to an empty string.
 
-## Pinning
-
-Choose how to reference the action based on your update and reproducibility needs:
-
-| Reference | Behavior |
-| --- | --- |
-| `@v2` | A mutable, floating tag that moves automatically to each new v2 release, making new ORAS CLI versions available without workflow changes. |
-| `@vX.Y.Z` (for example, `@v2.0.3`) | A full patch tag for an immutable release cannot be moved or deleted. This guarantee only applies to releases published after release immutability was enabled on 2026-10-17; v2.0.2 and earlier are not immutable. |
-| `@<full-commit-sha>` | A content-addressed reference to an exact commit, providing the strongest pin of these options. Full-length commit SHA pinning is recommended in the [GitHub Actions security hardening guide](https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions#using-third-party-actions). |
-
-To pin to a commit, replace `<full-commit-sha>` with the full commit SHA from the desired release in this repository and keep its version in a comment:
-
-```yaml
-steps:
-  - uses: oras-project/setup-oras@<full-commit-sha> # v2.0.3
-```
-
-Dependabot's `github-actions` ecosystem can update both SHA pins and their trailing version comments, so pinning to a SHA still allows automated update PRs. See [Keeping your actions up to date with Dependabot](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/keeping-your-actions-up-to-date-with-dependabot).
-
 ## Docs
 
 Documentation for the ORAS CLI is located on the [project website][docs-cli].
