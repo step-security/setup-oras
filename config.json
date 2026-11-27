@@ -5,8 +5,8 @@
   "action_type": "node",
   "upstream": {
     "repository": "oras-project/setup-oras",
-    "synced_tag": "v2.0.2",
-    "synced_commit": "005458ad77f1c8facd38a094e4af2e69e5607ff4",
+    "synced_tag": "v2.0.4",
+    "synced_commit": "ac735097e22fe643015b0d19645f7c9a69942128",
     "archived": false
   },
   "build": {
